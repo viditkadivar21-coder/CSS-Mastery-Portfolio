@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mastery Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <h1 class="nav__logo">CSS Mastery</h1>
+            <ul class="nav__list">
+                <li><a class="nav__link">Grid</a></li>
+                <li><a class="nav__link">Flexbox</a></li>
+                <li><a class="nav__link">Variables</a></li>
+                <li><a class="nav__link">Animations</a></li>
+                <li><a class="nav__link">Selectors</a></li>
+                <li><a class="nav__link">BEM</a></li>
+                <li><a class="nav__link">Optimization</a></li>
+            </ul>
+            <button id="themeToggle" class="nav__theme-btn">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h2 class="hero__title">CSS Mastery</h2>
+            <p class="hero__subtitle">Master advanced CSS techniques</p>
+        </section>
+
+        <section class="projects">
+            <article class="project-card" id="grid">
+                <h3 class="project-card__title">CSS Grid Mastery</h3>
+                <p class="project-card__description">Learn Grid properties and create complex layouts</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+
+            <article class="project-card" id="flexbox">
+                <h3 class="project-card__title">Flexbox Deep Dive</h3>
+                <p class="project-card__description">Master Flexbox for component layouts</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+
+            <article class="project-card" id="variables">
+                <h3 class="project-card__title">CSS Variables</h3>
+                <p class="project-card__description">Implement theme system with custom properties</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+
+            <article class="project-card" id="animations">
+                <h3 class="project-card__title">Animations & Transitions</h3>
+                <p class="project-card__description">Add smooth animations to enhance UX</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+
+            <article class="project-card" id="selector">
+                <h3 class="project-card__title">Advanced Selectors</h3>
+                <p class="project-card__description">Use pseudo-classes and pseudo-elements</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+
+            <article class="project-card" id="methodology">
+                <h3 class="project-card__title">CSS Methodology</h3>
+                <p class="project-card__description">Implement BEM for organized CSS</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+
+            <article class="project-card" id="optimization">
+                <h3 class="project-card__title">Optimization</h3>
+                <p class="project-card__description">Minify CSS, test performance, cross-browser testing</p>
+                <a class="project-card__link">View Project</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2026 CSS Mastery Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

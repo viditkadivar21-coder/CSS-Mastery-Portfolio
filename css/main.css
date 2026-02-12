@@ -1,0 +1,54 @@
+/* ========== CSS VARIABLES (Theme System) ========== */
+:root {
+    --color-primary: #6366f1;
+    --color-secondary: #ec4899;
+    --color-dark: #1f2937;
+    --color-light: #f3f4f6;
+    --color-white: #ffffff;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-speed: 0.3s;
+    --border-radius: 0.5rem;
+}
+.dark-theme {
+  --color-light: #0f172a;
+  --color-dark: #1f2021;
+  --color-white: #e5eaf1;
+}
+
+
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== BASE STYLES ========== */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+/* ========== RESPONSIVE GLOBAL FIXES ========== */
+@media (max-width: 768px) {
+    .main {
+        padding: var(--spacing-md);
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+}

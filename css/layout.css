@@ -1,0 +1,219 @@
+/* ========== HEADER & NAVIGATION ========== */
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    position: relative;
+}
+
+.nav__logo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--color-secondary);
+    border-radius: 2px;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+    position: relative;
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-secondary);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav__link:hover::before {
+    width: 100%;
+}
+
+.nav__link:hover {
+    color: var(--color-primary);
+}
+
+.nav__theme-btn{
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+}
+
+.nav__theme-btn:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+.nav__theme-btn:active {
+    transform: scale(0.98);
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero__subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+/* ========== PROJECT GRID ========== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+/* ========== PROJECT CARD ========== */
+.project-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transition: left var(--transition-speed) ease;
+}
+
+.project-card:hover::before {
+    left: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.project-card__description {
+    color: #666;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.project-card__link {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+}
+
+.project-card__link:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+.project-card__link:active {
+    transform: scale(0.98);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.footer__text {
+    opacity: 0.8;
+}
+
+/* ========== NAV RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .nav__list {
+        justify-content: center;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
